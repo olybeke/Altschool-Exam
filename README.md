@@ -1,3 +1,7 @@
+# Altschool Frontend Engineering Exam Project
+This is Altschool frontend engineering second semester Exam project.
+The live site of the project was deployed with vercel and can be viewed here `link` (https://altschool-exam-five.vercel.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +72,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Altschool-Exam

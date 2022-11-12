@@ -1,34 +1,131 @@
 *{
   margin: 0;
-  padding: 10px;
+  padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
-.nav{
-  width: screen;
-  background-color: #a54a99;
-  color: rbg(90, 14, 59);
-  display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+
+
+
+body{
+  height:100vh;
+}
+
+.App{
+  height:100vh;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 50px;
+  background: silver;
+}
+ 
+ 
+.color_white{
+  color:white;
   text-decoration: none;
 }
 
-nav a{
+nav{
+  font-family: 'Poppins', sans-serif;
+  height: 10vh;
+  width: 60%;
   text-decoration: none;
-  font-size: medium;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav button, .container__reset_increment_decrement button, .counter button, .error button{
+  background: #0d0d0f;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #ffff;
+  width: 100px;
+  height: 40px;
+  transition: .3s ease-in-out;
 }
 
-.counter{
-   flex-direction: column;
-   align-items: center;
-   display: flex;
-   margin: 60px;
-   justify-content: center;
+nav button:hover, .container__reset_increment_decrement button:hover, .counter button:hover{
+  opacity: 70%;
+}
+
+button.btn-color-value{
+  background: black !important;
+  border: none !important;
+  width: 100px !important;
+  height: 40px !important;
+}
+
+section.counter{
+  font-family: 'Poppins', sans-serif;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter input, .counter p{
+  font-size: 20px;
+  color: #18191e;
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.counter input{
+  padding: 10px;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid #18191ea1;
+}
+.container_reset_increment_decrement{
+  font-family: 'Poppins', sans-serif;
+  width: 60%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.container_reset_increment_decrement button{
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: #ffff;
+  width: 150px;
+  height: 40px;
+  transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width:414px){
+  nav{
+      width: 100%;
+  }
+
+  nav button, .container__reset_increment_decrement button, .counter button{
+      width: 100px;
+      height: 30px;
+  }
+
+  section.container__reset_increment_decrement {
+      flex-direction: column;
+      height: 20vh;
+  }
+
+  .counter input{
+      padding: 15px;
+      width: 150px;
+      height: 30px;
+  }
+
+
 }

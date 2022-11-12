@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import {Helmet} from 'react-helmet-async';
 
 function ReducerCounter() {
     function reducer(state, action) {
@@ -26,24 +27,23 @@ function ReducerCounter() {
 
 
    return (
-    <div> 
-        <h1>
-            useReducer Counter
-        </h1>
-        <h2>count : {state.count} </h2>
-        <input type='number' onChange={setValue} onBlur={resetInput} />
-            <div> 
-                <button onClick={ () => dispatch({type : 'increase'})}> 
-                    Increase
-                </button>
-                <button onClick={ () => dispatch({type : 'decrease'})}> 
-                    Decrease
-                </button>
-                <button onClick={ () => dispatch({type : 'reset'})}> 
-                    Reset
-                </button>
-            </div>
-    </div>
+    <> 
+        <Helmet>
+            <title>useReducer Counter section</title>
+            <meta name='description' content='useReducer Counter section'/>
+             <link rel="canonical" href="/components/ReducerCounter" />
+        </Helmet>
+        <section className='counter'>
+          <button>useReducer Counter</button>
+          <input type='number' placeholder='Input Value' onChange={setValue} onBlur={resetInput} />
+         <h2>count : {state.count} </h2>
+        </section>
+               <section className="container_reset_increment_decrement">
+                 <button className='btn-color-value' onClick={ () => dispatch({type : 'increase'})}>Increase</button>
+                 <button onClick={ () => dispatch({type : 'decrease'})} className='btn-color-value'>Decrease</button>
+                 <button onClick={ () => dispatch({type : 'reset'})} className='btn-color-value'> Reset</button>
+               </section>
+    </>
    )
 }
 export default ReducerCounter;

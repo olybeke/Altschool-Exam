@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {Helmet} from 'react-helmet-async';
 
 function TestError() {
     const [errorCount, setErrorCount] = useState(0);
@@ -10,6 +11,11 @@ function TestError() {
     }
     return (
         <div>
+        <Helmet>
+            <title>useReducer Counter section</title>
+            <meta name='description' content='useReducer Counter section'/>
+            <link rel="canonical" href="/components/TestError" />
+          </Helmet>
             <p>
                To test ErrorBoundary increase ErrorCount to be equal to 3
              </p>
